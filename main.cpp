@@ -76,6 +76,23 @@ struct Node *searchNode(struct Node *head, int n) {
  */
 bool deleteNode(struct Node **head, Node *ptrDel) {
   //TODO
+  Node *cur = *head;
+  if(ptrDel == *head) {
+    *head = cur->next;
+    ptrDel->next = nullptr;
+    delete ptrDel;
+    return true;
+  }
+
+  while(cur != nullptr)  {
+    if(cur->next == ptrDel) {
+      cur->next = ptrDel->next;
+      ptrDel->next = nullptr;
+      delete ptrDel;
+      return true;
+    }
+    cur = cur->next;
+  }
   return false;
 }
 
