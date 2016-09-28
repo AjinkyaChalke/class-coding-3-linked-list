@@ -17,8 +17,8 @@ struct Node {
  */
 void initNode(struct Node *head, int n) {
   //TODO: Initiliaze the node data to n and the next pointer to..?
-  this.data=n;
-  this.next= nullptr;
+  head->data=n;
+  head->next= nullptr;
 }
 
 /**
