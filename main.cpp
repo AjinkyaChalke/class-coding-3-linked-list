@@ -36,7 +36,10 @@ void addNode(struct Node *head, int n) {
  * @param n - data that the new node should hold
  */
 void insertFront(struct Node **head, int n) {
-  //TODO
+    Node * front = new Node;
+    front -> data = n;
+    front -> next = *head;
+    *head = front;
 }
 
 /**
