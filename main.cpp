@@ -42,7 +42,6 @@ void insertFront(struct Node **head, int n) {
  * @param head  - pointer to the head of the list
  */
 void display(struct Node *head) {
-  //TODO
   Node *curPtr = head;
   while (curPtr != nullptr)
   {
@@ -58,8 +57,13 @@ void display(struct Node *head) {
  * @return - pointer to the node found.
  */
 struct Node *searchNode(struct Node *head, int n) {
-  //TODO
-  return NULL;
+  Node *curPtr = head;
+  while (curPtr != nullptr)
+  {
+    if (curPtr->data == n)
+      return curPtr;
+  }
+  return nullptr;
 }
 
 /**
