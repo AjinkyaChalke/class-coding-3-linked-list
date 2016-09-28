@@ -67,6 +67,7 @@ struct Node *searchNode(struct Node *head, int n) {
   {
     if (curPtr->data == n)
       return curPtr;
+    curPtr = curPtr->next;
   }
   return nullptr;
 }
