@@ -43,6 +43,12 @@ void insertFront(struct Node **head, int n) {
  */
 void display(struct Node *head) {
   //TODO
+  Node *curPtr = head;
+  while (curPtr != nullptr)
+  {
+    cout << curPtr->data << endl;
+    curPtr = curPtr->next;
+  }
 }
 
 /**
