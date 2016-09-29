@@ -27,9 +27,25 @@ void initNode(struct Node *head, int n) {
  * @param n - data that the new node should hold
  */
 void addNode(struct Node *head, int n) {
+
+  //TODO - Implement this function.
+  Node * currptr = head;
+  Node * newnode = new Node;
+  newnode->next = NULL;
+  newnode-> data = n;
+  if(head==NULL)
+    head=newnode;
+  while(currptr->next!=nullptr){
+    currptr=currptr->next;
+
+}
+  if(currptr->next==nullptr)
+    currptr->next=newnode;
+
   //TODO - Implement this function.
 }
 
+/**
 /**
  * This funtion addes a node to the front of the list.
  * @param head - pointer to the head of the list
@@ -50,9 +66,10 @@ void display(struct Node *head) {
   Node *curPtr = head;
   while (curPtr != nullptr)
   {
-    cout << curPtr->data << endl;
+    cout << curPtr->data << " ";
     curPtr = curPtr->next;
   }
+  cout<< endl;
 }
 
 /**
@@ -163,7 +180,7 @@ int main() {
   struct Node *newHead;
   struct Node *head = new Node;
 
-  /*
+
   initNode(head,10);
   display(head);
 
@@ -222,6 +239,6 @@ int main() {
   cout << "Deleting the copied list\n";
   deleteLinkedList(&newHead);
   display(newHead);
-   */
+
   return 0;
 }
